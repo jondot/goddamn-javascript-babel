@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+const path = require('path')
+const fs = require('fs')
+
+const copy = (fromFile, toFile) => {
+  fs.writeFileSync(toFile, fs.readFileSync(fromFile))
+}
+
+console.log('Applying goddamn javascript configs.')
+const from = path.join(__dirname, '../')
+const target = process.cwd()
+
+const targetbabel = path.join(target, '.babelrc')
+if (fs.existsSync(targetbabel)) {
+  console.error(`exists:\n\t${targetbabel}`)
+  process.exit(1)
+}
+copy(path.join(from, '.babelrc'), targetbabel)
+console.log(`added:\n\t${targetbabel}`)
+
+
+

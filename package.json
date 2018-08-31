@@ -1,6 +1,6 @@
 {
   "name": "goddamn-javascript-babel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "test": "babel sample.js"
@@ -33,6 +33,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
+    "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
     "@babel/runtime": "^7.0.0",
